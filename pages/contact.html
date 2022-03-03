@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid-Flex-Responsive</title>
+    <link rel="stylesheet" href="../css/grid.css">
+</head>
+<body>
+    <header class="header">
+        <h1 class="header__title">ABOUT ME</h1>
+    </header>
+    <nav class="nav">
+        <ul class="nav__list">
+            <li>
+                <a class="nav__item" href="../index.html">HOME</a>
+            </li>
+            <li>
+                <a class="nav__item" href="works.html">WORKS</a>
+            </li>
+            <li>
+                <a class="nav__item" href="products.html">PRODUCTS</a>
+            </li>
+            <li>
+                <a class="nav__item" href="about.html">ABOUT</a>
+            </li>
+            <li>
+                <a class="nav__item" href="contact.html">CONTACT ME</a>
+            </li>
+        </ul>
+    </nav>
+    <main id="main">
+        <section id="seccion1">
+            <form class="form">
+                <div class="form__div">
+                    <label class="form__datos" for="name">Name</label>
+                    <input class="form__datos--container" type="text" id="name" required>
+                    <label class="form__datos" for="lastname">Lastname</label>
+                    <input class="form__datos--container" type="text" id="lastname" required>
+                    <label class="form__datos" for="email">E-mail</label>
+                    <input class="form__datos--container" type="email" name="mail" id="email" required placeholder="example@gmail.com">
+                </div>
+                <div class="form__div--sm">
+                    <label class="form__seleccion" for="male">Male</label>
+                    <input type="radio" name="sex" id="male">
+                    <label class="form__seleccion" for="female">Female</label>
+                    <input type="radio" name="sex" id="female">
+                </div>
+                <div class="form__div--sm">
+                    <h4 class="form__smalltitle">How did you find me?</h4>
+                    <label class="form__checkbox" for="people">People</label>
+                    <input type="checkbox" name="people" id="people">
+                    <label class="form__checkbox" for="social-media">Social Media</label>
+                    <input type="checkbox" name="social-media" id="social-media">
+                    <label class="form__checkbox" for="other">Other</label>
+                    <input type="checkbox" name="other" id="other">
+                </div>
+                <div class="form__div--sm">
+                    <label class="form__textarea" for="moredata">More Data</label>
+                    <textarea class="form__textarea--area" name="moredata" id="" cols="45" rows="10" placeholder="moredata..."></textarea>
+                </div>
+                <div class="form__button">
+                    <input type="submit" value="send">
+                </div>
+            </form>
+        </section>
+        <section id="seccion2">
+            <div class="form__div2">
+                <label class="form__img" for="facebook">Facebook</label>
+                <input class="form__image" type="image" src="../img/facebook.png" alt="facebook">
+                <label class="form__img" for="instagram">Instagram</label>
+                <input class="form__image" type="image" src="../img/instagram.png" alt="instagram">
+                <label class="form__img" for="twitter">Twitter</label>
+                <input class="form__image" type="image" src="../img/twitter.png" alt="twitter">
+              </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <h3>CoderHouse | 2022 | Comision 24510</h3>
+    </footer>
+</body>
+</html>

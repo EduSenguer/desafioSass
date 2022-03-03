@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Bebas+Neue&family=Lobster&family=Permanent+Marker&family=Russo+One&family=Staatliches&family=Supermercado+One&family=Zen+Kurenaido&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/* GRID HOME */
+.grid-container {
+    height: 100vh;
+    display: grid;
+    border-style: solid;
+    grid-template-areas: 
+    "header header header header"
+    "nav nav nav publicidad"
+    "main main main publicidad"
+    "footer footer footer footer";
+}
+.header {
+    grid-area: header;
+    background-color: darkmagenta;
+    border-style: solid;
+    border-color: rgb(187, 186, 186);
+    height: 10vh;
+}
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: nav;
+    background-color: rgb(175, 41, 175);
+    border-style: solid;
+    border-color: rgb(187, 186, 186);
+    height: 5vh;
+}
+.nav__list {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    list-style: none;
+}
+.main {
+    grid-area: main;
+    background-color: dodgerblue;
+    border-style: solid;
+    border-color: rgb(187, 186, 186);
+    height: auto;
+}
+.main__items {
+    border: 1px solid whitesmoke;
+}
+.main__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.publicidad {
+    grid-area: publicidad;
+    background-color: darkturquoise;
+    border-style: solid;
+    border-color: rgb(187, 186, 186);
+    height: auto;
+}
+.publicidad__img img {
+    width: 100%;
+    height: 100%;
+}
+.footer {
+    grid-area: footer;
+    background-color: lightblue;
+    border-style: solid;
+    border-color: rgb(187, 186, 186);
+    height: 5vh;
+}
+
+/* GRID WORKS */
+body {
+    height: 100vh;
+    background-color: white;
+}
+.gridGaleria {
+    display: grid;
+    height: auto;
+    width: 80%;
+    margin: 0 auto;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 10px;
+    row-gap: 10px;
+}
+.gridGaleria img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* CONTACT */
+#main {
+    background-color: dodgerblue;
+    border-style: solid;
+    border-color: rgb(187, 186, 186);
+    height: auto;
+}
+#seccion1 {
+    display: flex;
+    justify-content: center;
+}
+.form__div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.form__image {
+    max-width: 256px;
+    max-height: 256px;
+}
+.form {
+    height: 20rem;
+    display: grid;
+    justify-content: center;
+    background-color: slateblue;
+    border-radius: 16px;
+}
+/* ABOUT */
+.aboutMain {
+    height: 80vh;
+}
+.imgAbout {
+    display: flex;
+    flex-direction: row;
+    column-gap: 2px;
+}
+.imageAbout {
+    margin-top: 50px;
+    max-width: 33%;
+    object-fit: cover;
+}
+.textAbout {
+    text-align: center;
+}
+/* PRODUCTS */
+.productos {
+    height: 80vh;
+    display: flex;
+    flex-direction: row;
+}
+.producto {
+    height: 100%;
+}
+.especif {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    width: 60%;
+    background-color: gray;
+}
+.especif__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+/* MEDIA QUERIS MOBILE */
+@media screen and (max-width: 481px) {
+    .grid-container {
+        height: 100vh;
+        display: grid;
+        border-style: solid;
+        grid-template-areas: 
+        "header"
+        "nav"
+        "main"
+        "publicidad"
+        "footer";
+    }
+    .main {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        column-gap: 1px;
+        row-gap: 1px;
+    }
+    .publicidad {
+        grid-area: publicidad;
+        background-color: darkturquoise;
+        border-style: solid;
+        border-color: rgb(187, 186, 186);
+        height: auto;
+    }
+    .header__title {
+        display: flex;
+        justify-content: center;
+        margin-top: 15px;
+        color: whitesmoke;
+        font-family: 'Bebas Neue', cursive;
+    }
+    .footer {
+        text-align: center;
+        color: whitesmoke;
+        font-family: 'Bebas Neue', cursive;
+    }
+    .main__items {
+        color: whitesmoke;
+        font-family: 'Staatliches', cursive;
+    }
+    .publicidad__item {
+        color: whitesmoke;
+        font-family: 'Staatliches', cursive;
+    }
+    .nav__item {
+        color: whitesmoke;
+        font-family: 'Staatliches', cursive;
+    }
+    .gridGaleria {
+        display: grid;
+        height: auto;
+        width: 80%;
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 10px;
+    }
+    .gridGaleria img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .form__image {
+        max-width: 64px;
+        max-height: 64px;
+    }
+    /* FORM */
+    #seccion1 {
+        height: 70vh;
+    }
+    .form {
+        height: auto;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        column-gap: 5px;
+        background-color: rgb(0, 162, 190);
+        border-radius: 16px;
+    }
+    .form__div {
+        display: flex;
+        flex-direction: column;
+    }
+    .form__datos {
+        color: whitesmoke;
+        font-family: 'Staatliches', cursive;
+    }
+    .form__seleccion {
+        color: whitesmoke;
+        font-family: 'Staatliches', cursive;
+    }
+    .form__checkbox {
+        color: whitesmoke;
+        font-family: 'Staatliches', cursive;
+    }
+    .form__smalltitle {
+        color: rgb(129, 129, 129);
+        font-family: 'Staatliches', cursive;
+    }
+    .form__textarea {
+        color: whitesmoke;
+        font-family: 'Staatliches', cursive;
+    }
+    .form__textarea--area {
+        border-radius: 16px;
+    }
+    .form__img {
+        color: whitesmoke;
+        font-family: 'Staatliches', cursive;
+    }
+    .form__div--sm {
+        display: flex;
+        justify-content: center;
+    }
+    .form__button {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+    /* ABOUT */
+    .aboutMain {
+        height: auto;
+        background-color: cornflowerblue;
+    }
+    .imgAbout {
+        display: flex;
+        flex-direction: column;
+    }
+    .textAbout {
+        color: whitesmoke;
+        font-family: 'Staatliches', cursive;
+    }
+    .imageAbout {
+        margin-top: 0;
+        max-width: 100%;
+    }
+    /* PRODUCTS */
+    .productos {
+        height: 80vh;
+        display: flex;
+        flex-direction: column;
+    }
+    .especif {
+        display: grid;
+        justify-content: center;
+        align-content: center;
+        height: 100%;
+        width: 100%;
+        background-color: gray;
+        color: whitesmoke;
+        font-family: 'Staatliches', cursive;
+    }
+
+}
