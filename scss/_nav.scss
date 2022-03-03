@@ -1,0 +1,18 @@
+$violeta: rgb(175, 41, 175);
+$bordecolor: rgb(187, 186, 186);
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: nav;
+    background-color: $violeta;
+    border-style: solid;
+    border-color: $bordecolor;
+    height: 5vh;
+    .nav__list {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        list-style: none;
+    }
+}

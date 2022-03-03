@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC&family=Bebas+Neue&family=Lobster&family=Permanent+Marker&family=Russo+One&family=Staatliches&family=Supermercado+One&family=Zen+Kurenaido&display=swap");
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-area: nav;
+  background-color: #af29af;
+  border-style: solid;
+  border-color: #bbbaba;
+  height: 5vh; }
+  .nav .nav__list {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    list-style: none; }
+
+.footer {
+  grid-area: footer;
+  background-color: lightblue;
+  border-style: solid;
+  border-color: #bbbaba;
+  height: 5vh; }
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+.grid-container {
+  height: 100vh;
+  display: grid;
+  border-style: solid;
+  grid-template-areas: "header header header header" "nav nav nav publicidad" "main main main publicidad" "footer footer footer footer"; }
+
+.main {
+  grid-area: main;
+  background-color: dodgerblue;
+  border-style: solid;
+  border-color: #bbbaba;
+  height: auto; }
+  .main .main__items {
+    border: 1px solid whitesmoke; }
+  .main .main__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; }
+
+.publicidad {
+  grid-area: publicidad;
+  background-color: darkturquoise;
+  border-style: solid;
+  border-color: #bbbaba;
+  height: auto; }
+  .publicidad .publicidad__img img {
+    width: 100%;
+    height: 100%; }
+
+@media screen and (max-width: 481px) {
+  .grid-container {
+    height: 100vh;
+    display: grid;
+    border-style: solid;
+    grid-template-areas: "header" "nav" "main" "publicidad" "footer"; }
+  .main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    column-gap: 1px;
+    row-gap: 1px; }
+    .main .main__items {
+      color: whitesmoke;
+      font-family: 'Staatliches', cursive; }
+  .publicidad {
+    grid-area: publicidad;
+    background-color: darkturquoise;
+    border-style: solid;
+    border-color: #bbbaba;
+    height: auto; }
+    .publicidad .publicidad__item {
+      color: whitesmoke;
+      font-family: 'Staatliches', cursive; }
+  .gridGaleria {
+    display: grid;
+    height: auto;
+    width: 80%;
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 10px; }
+    .gridGaleria .gridGaleria img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; }
+  .form__image {
+    max-width: 64px;
+    max-height: 64px; }
+  .footer {
+    text-align: center;
+    color: whitesmoke;
+    font-family: 'Bebas Neue', cursive; } }
